@@ -17,13 +17,13 @@
         2. Add ?key=INSERTAPIKEY to the end of the below script URL
         3. Finally replace INSERTAPIKEY with the API key you obtained in step #1.
 -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV91n5QQ-sykP58geIYP_jhAWKkRA1_N8"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
 function CustomMapType() {}
 
 CustomMapType.prototype.tileSize = new google.maps.Size(1024,1024);
 CustomMapType.prototype.minZoom = 3;
-CustomMapType.prototype.maxZoom = 8;
+CustomMapType.prototype.maxZoom = 7;
 CustomMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
     var div = ownerDocument.createElement('DIV');
     var baseURL = 'Images/';
@@ -104,7 +104,7 @@ function load() {
     var mapOptions = {
         zoom: 3,
         // minZoom: 3,
-        // maxZoom: 8,
+        // maxZoom: 7,
         isPng: false,
         mapTypeControl: false,
         streetViewControl: false,
